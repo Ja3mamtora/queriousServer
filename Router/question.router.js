@@ -21,7 +21,7 @@ router.get('/get/:id', async(req, res) =>{
 router.post('/create', jsonParser, async(req, res) => {
     const {token, title, body, asker} = req.body;
     //Validating asker
-    await User.findOne({email: asker, token}, (err, user) => {
+     User.findOne({email: asker, token}, (err, user) => {
         if(err) res.status(500).json("Something went wrong.")
         else if(!user) res.status(403).json("Permission denied.")
         else{
@@ -36,7 +36,7 @@ router.post('/create', jsonParser, async(req, res) => {
 router.post('/answer', jsonParser, async(req, res) => {
     const {answer, token, answerer, question} = req.body;
     //Validating answerer
-    await User.findOne({email: answerer, token}, (err, user) => {
+     User.findOne({email: answerer, token}, (err, user) => {
         if(err) res.status(500).json("Something went wrong.")
         else if(!user) res.status(403).json("Permission denied. ")
         else{
