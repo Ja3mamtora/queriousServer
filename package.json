@@ -17,7 +17,6 @@
     "bluebird": "^3.5.1",
     "body-parser": "^1.20.2",
     "brace-expansion": "^1.1.11",
-    "bson": "^1.1.6",
     "bytes": "^3.1.2",
     "call-bind": "^1.0.2",
     "chownr": "^2.0.0",
